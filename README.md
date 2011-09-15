@@ -15,12 +15,11 @@ in its current form -- to be used for production tests.
 Define a test with some marks:
 
 ```ruby
+require "minitest/autorun"
 require "minitest/unit"
 require "minitest/mark"
 
 class MyTest < MiniTest::Unit::TestCase
-  include MiniTest::Mark
-
   mark("foo")
   def test_things
     assert true
@@ -35,8 +34,7 @@ end
 
 Run them like normal and they'll run, like normal:
 
-    $ rake test
-    Loaded suite /Users/mitchellh/.rvm/gems/ruby-1.9.2-p290/bin/rake
+    $ ruby my_test.rb
     Started
     ..
     Finished in 0.000743 seconds.
@@ -45,8 +43,7 @@ Run them like normal and they'll run, like normal:
 
 Run with `MARK` environmental variable to target only select marks:
 
-    $ MARK=foo rake test
-    Loaded suite /Users/mitchellh/.rvm/gems/ruby-1.9.2-p290/bin/rake
+    $ MARK=foo ruby my_test.rb
     Started
     .
     Finished in 0.000533 seconds.
