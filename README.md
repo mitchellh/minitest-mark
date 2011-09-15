@@ -12,7 +12,7 @@ in its current form, to be used for production tests.
 
 Define a test with some marks:
 
-@@@ruby
+```ruby
 require "minitest/unit"
 require "minitest/mark"
 
@@ -29,7 +29,7 @@ class MyTest < MiniTest::Unit::TestCase
     assert true
   end
 end
-@@@
+```
 
 Run them like normal and they'll run, like normal:
 
