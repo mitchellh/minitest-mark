@@ -5,10 +5,12 @@ which adds the ability to use test marking. This feature is inspired by
 [pytest's marks](http://pytest.org/latest/mark.html).
 
 
-**WARNING:** This is a _proof of concept_. It works, but is not intended,
-in its current form, to be used for production tests.
+**WARNING:** This is a _proof of concept_. It works, but is not intended --
+in its current form -- to be used for production tests.
 
 ## Example
+
+### Defining And Running Marks
 
 Define a test with some marks:
 
