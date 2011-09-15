@@ -13,6 +13,8 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = ">= 1.3.6"
   s.rubyforge_project         = "minitest-mark"
 
+  s.add_dependency "minitest", "~> 2.6.0"
+
   s.files         = `git ls-files`.split("\n")
   s.executables   = `git ls-files`.split("\n").map{|f| f =~ /^bin\/(.*)/ ? $1 : nil}.compact
   s.require_path  = 'lib'
